@@ -8,32 +8,142 @@
     <title>Web Api CRUD Demo</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <h2>Web Products</h2>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Web Products</h2>
         </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <table id="productTable" class="table table-bordered table-condensed table-striped">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Product</th>
-                            <th>Introduced On</th>
-                            <th>Url</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <table id="productTable" class="table table-bordered table-condensed table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Product</th>
+                    <th>Introduced On</th>
+                    <th>Url</th>
+                </tr>
+                </thead>
+            </table>
         </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <button class="btn btn-primary" onclick="addClick()" type="button" id="addButton">Add Product</button>
-            </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-sm-6">
+            <button class="btn btn-primary" onclick="addClick();" type="button" id="addButton">Add Product</button>
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">Product Information</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName" name="productName" class="form-control col-sm" placeholder="Enter product name" />
+                        <small>Product name as it appears on the package</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="introDate">Introduction Date</label>
+                        <input type="date" id="introDate" name="introDate" class="form-control" />
+                        <small>Date the product was introduced to the sales team</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="url">Url</label>
+                        <input type="url" id="url" name="url" class="form-control" placeholder="Enter url" />
+                        <small>Url for product details</small>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" id="updateButton" class="btn btn-primary" onclick="updateClick();">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateClick() {
+
+    }
+
+    function addClick() {
+
+    }
+
+    function productList() {
+        $.ajax({
+            url: 'http://localhost:55278/api/Product/',
+            type: 'GET',
+            dataType: 'json',
+            success: function(products) {
+                productListSuccess(products);
+            },
+            error: function(request, message, error) {
+                handleException(request, message, error);
+            }
+
+        });
+    }
+
+    function productListSuccess(products) {
+        //Iterate over data received
+        $.each(products,
+            function(index, product) {
+                productAddRow(product);
+            });
+    }
+
+    function productAddRow(product) {
+        if ($("#productTable tbody").length === 0) {
+            $("#productTable").append("<tbody></tbody>");
+        }
+
+        $("#productTable tbody").append(
+            productBuildTableRow(product));
+    }
+
+    function productTableBuildRow(product) {
+        var result =
+            "<tr>" +
+                "<td>" +
+                product.ProductName +
+                "</td>" +
+                "<td>" +
+                product.IntroductionDate +
+                "</td>" +
+                "<td" +
+                product.Url +
+                "</td>" +
+                "</tr>";
+        return result;
+    }
+
+    function handleException(request, message, error) {
+        var msg = "";
+        msg += "Code: " + request.status + "\n";
+        msg += "Text: " + request.statusText + "\n";
+        if (request.responseJSON != null) {
+            msg += "Message " +
+                request.responseJSON.MessageChannel +
+                "\n";
+        }
+        alert(msg);
+    }
+
+</script>
+
+<script>
+    $(document).ready(function() {
+        productList();
+    });
+</script>
 </body>
 </html>

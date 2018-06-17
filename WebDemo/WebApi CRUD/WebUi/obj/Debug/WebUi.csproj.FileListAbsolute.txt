@@ -1,0 +1,17 @@
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\WebUi.dll.config
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\WebUi.dll
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\WebUi.pdb
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\obj\Debug\WebUi.csprojResolveAssemblyReference.cache
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\obj\Debug\WebUi.csproj.CoreCompileInputs.cache
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\obj\Debug\WebUi.dll
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\obj\Debug\WebUi.pdb
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\Newtonsoft.Json.dll
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\System.Net.Http.Formatting.dll
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\System.Web.Http.dll
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\System.Web.Http.WebHost.dll
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\Newtonsoft.Json.xml
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\System.Net.Http.Formatting.xml
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\System.Web.Http.xml
+C:\Users\CharlM\Source\Repos\WebDemo\WebApi CRUD\WebUi\bin\System.Web.Http.WebHost.xml
